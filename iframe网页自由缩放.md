@@ -1,0 +1,178 @@
+网页高度宽度自由缩放，
+
+手机网页实用，
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手指拖拽调整 iframe 大小（限宽不限高）中意码遗漏索引复选，核心方案，遗漏索引复选</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; overscroll-behavior: none; }
+  .iframeContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* 最大宽度限制 */
+    height: 400px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    touch-action: none;
+    margin-bottom: 20px;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .sizeDisplay {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+
+<h2>手指拖拽调整 iframe（限宽不限高）</h2>
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="gpt9999999999999.php"></iframe>
+</div>
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="dui333333333333333333.php"></iframe>
+</div>
+
+
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="dui333333333333333333.php"></iframe>
+</div>
+
+
+
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="5666666666666666.php"></iframe>
+</div>
+
+
+
+fx8555555555555555558.htm
+
+<div><br>
+
+范围随机，自然随机，反选随机，核心方案，遗漏索引复选
+
+
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="fx8555555555555555558.htm"></iframe>
+</div>
+
+
+
+
+
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="2888888888888888888888.htm"></iframe>
+</div>
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="yllllllllllllll9999999999999999ylllllllllllllllllll.php"></iframe>
+</div>
+
+
+
+
+<div class="iframeContainer">
+  <div class="sizeDisplay"></div>
+  <iframe src="2yyy2yyy2yyllllllllll2222llllll.php"></iframe>
+</div>
+
+
+
+
+
+
+
+<script>
+const MIN_WIDTH = 100;   // 最小宽度
+const MAX_WIDTH = 800;   // 最大宽度
+
+const containers = document.querySelectorAll('.iframeContainer');
+
+containers.forEach(container => {
+    const display = container.querySelector('.sizeDisplay');
+    let startX, startY, startWidth, startHeight;
+
+    function updateDisplay() {
+        display.textContent = `${container.offsetWidth}px × ${container.offsetHeight}px`;
+    }
+
+    updateDisplay();
+
+    container.addEventListener('touchstart', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startWidth = container.offsetWidth;
+        startHeight = container.offsetHeight;
+    }, { passive: false });
+
+    container.addEventListener('touchmove', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const touch = e.touches[0];
+        let dx = touch.clientX - startX;
+        let dy = touch.clientY - startY;
+
+        // 宽度限制
+        let newWidth = startWidth + dx;
+        if (newWidth < MIN_WIDTH) newWidth = MIN_WIDTH;
+        if (newWidth > MAX_WIDTH) newWidth = MAX_WIDTH;
+
+        // 高度不限
+        let newHeight = startHeight + dy;
+
+        container.style.width = newWidth + 'px';
+        container.style.height = newHeight + 'px';
+        updateDisplay();
+    }, { passive: false });
+});
+</script>
+
+<p>拖拽 iframe 区域调整宽高，宽度受限制，高度自由，左上角显示实时宽高</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
